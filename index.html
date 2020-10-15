@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://zplit.online/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://zplit.online/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://zplit.online/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://zplit.online/favicon/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
+  <meta name="keywords" content="zplit, zplit.online, zplit.eth, zplit music, zplit website, miguel morales, Zplit">
+  <meta property="og:title" content="zplit">
+  <meta name="owner" content="zplit">
+  <meta property="og:description" content="[zplit] official website | electronic musician / crypto artist">
+  <meta property="og:site_name" content="zplit">
+
+
+  <meta name="theme-color" content="#222222">
+  <style media="screen">
+    .unselect {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+
+    pre {
+      white-space: pre-line;
+    }
+
+    body {
+      font-size: 0.9rem;
+      background-color: #080808;
+      background-size: cover;
+      font-family: monospace;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+    }
+
+    p {
+      text-align: left;
+    }
+
+    h1 {
+      font-family: sans-serif;
+    }
+
+    h3 {
+      font-family: sans-serif;
+    }
+
+    hr {
+      border-color: #444;
+      border-top: none;
+    }
+
+
+    .box {
+      margin-top: 1.5rem;
+      width: 65%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.25rem;
+    }
+
+    .neon {
+      color: #0eb;
+    }
+
+    .backdark {
+      filter: opacity(0.5);
+      background-size: cover;
+      padding-top: 100%;
+    }
+
+    .fronttext {
+      z-index: 1;
+      width: -webkit-fill-available;
+      position: absolute;
+      bottom: 2rem;
+      padding: 1rem;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .links {
+      padding-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+    }
+
+    .links a {
+      width: auto;
+      margin-right: 0.2rem;
+      margin-right: 0.2rem;
+      break-inside: auto;
+      text-align: center;
+      border: solid 1px #00eebb6b;
+      padding: 0.5rem;
+      border-radius: 0.15rem;
+    }
+
+
+    .boton {
+      width: auto;
+      margin-right: 0.25rem;
+      break-inside: auto;
+      text-align: center;
+      border: solid 1px #00eebb6b;
+      padding: 0.5rem;
+      border-radius: 0.15rem;
+    }
+
+
+    .fullbtn {
+      display: inline-block;
+      width: 100px;
+    }
+
+    .links .icon img {
+      width: 1.2rem;
+    }
+
+    .profile {
+      float: left;
+      width: 7rem;
+      margin: 0.9rem;
+      border: solid 1px #00eebb6b;
+    }
+
+    .sublte {
+      color: #ffffffb5;
+    }
+
+    @media only screen and (max-width: 650px) {
+      .box {
+        width: 95%;
+      }
+
+      .profile {
+        float: right;
+      }
+    }
+
+    @media only screen and (min-width: 1080px) {
+      .box {
+        width: 37%;
+      }
+
+      .links {
+        width: 70%;
+      }
+
+    }
+
+    .links .primary {
+      border: solid 1px #006aee6b;
+    }
+
+    .item {
+      border: solid 1px #006aee6b;
+      border-radius: 0.25rem;
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      margin-bottom: 2.5rem;
+      display: flow-root;
+      position: relative;
+    }
+
+    .item .icon {
+      width: 32px;
+      float: left;
+      padding: 0.5rem;
+      border-radius: 0.75rem;
+    }
+
+    .artwork {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0.3rem;
+    }
+
+    .icon {
+      margin-bottom: 1rem;
+      width: 32px;
+      float: left;
+      padding: 0.5rem;
+      border-radius: 0.75rem;
+    }
+
+    .network {
+      border: none;
+      padding: 0.5rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0rem;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+  <title>zplit</title>
+
+  <script type="module" charset="utf-8">
+'use strict';
+
+
+import {
+  html,
+  render
+} from 'https://unpkg.com/lit-html@1.2.1/lit-html.js?module';
+
+
+const remoteSource = 'https://zplit.online/latest.json';
+
+window.zplitData = {};
+
+
+window.onload = () => {
+
+  window.htmlDisplay = document.querySelector('#htmlDisplay');
+  window.btnNet = document.querySelector('#btnNet');
+  window.btnLog = document.querySelector('#btnLog');
+  window.btnBio = document.querySelector('#btnBio');
+
+  loadData(remoteSource)
+    .then(() => {
+      menuTab('creations');
+    })
+    .catch(() => {
+      alert('Error al cargar');
+    })
+}
+window.menuTab = async (tab) => {
+
+  switch (tab) {
+    case 'creations':
+      render(logTemplate(zplitData), htmlDisplay);
+      btnLog.classList = 'primary';
+      btnNet.classList = '';
+      btnBio.classList = '';
+      break;
+    case 'networks':
+      render(netTemplate(zplitData), htmlDisplay);
+      btnLog.classList = '';
+      btnNet.classList = 'primary';
+      btnBio.classList = '';
+      break;
+    case 'about':
+        render(bioTemplate(zplitData), htmlDisplay);
+        btnLog.classList = '';
+        btnNet.classList = '';
+        btnBio.classList = 'primary';
+        break;
+
+    default:
+      render(logTemplate(zplitData), htmlDisplay)
+      btnLog.classList = 'primary';
+      btnNet.classList = '';
+      btnBio.classList = '';
+  }
+};
+
+async function loadData(url) {
+  if (!url) {
+    url = localSource
+  }
+  await fetch(url, {cache: "no-store"})
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log('Data loaded');
+      zplitData = data;
+    })
+    .catch((data) => {
+      console.log('Data could not be loadad.');
+        })
+};
+
+const logTemplate = (data) => html `
+    ${data.log.map((i) => html`
+      <div class="item">
+        <div class="fronttext">
+          <small>${i.tag}</small><br>
+          <p>
+            <b>${i.title}</b>
+            <br> <small>${i.desc} </small> <br>
+          </p>
+          <br>
+          <div style="text-align: left">
+            <a href="${i.file}"  class="boton fullbtn">🔊 Stream</a>
+            <a href="${i.action}" class="boton fullbtn">💎 Collect</a>
+          </div>
+          <br>
+        </div>
+      <div class="backdark" style="background-image: url('${i.img}')">
+
+      </div>
+      </div>`)}
+`;
+const netTemplate = (data) => html `
+    ${data.net.map((i) => html`
+      <a href=${i.action} class="item network">
+        <img alt=""  class="icon" src="${i.img}">
+        <div style="padding-top: 0.5rem">
+          <b>${i.title}</b><br>
+          <small>${i.desc}</small>
+        </div>
+      </a>`)}
+`;
+
+const bioTemplate = (data) => html `
+    <pre>
+      ${data.bio}
+    </pre>
+`;
+
+  </script>
+
+</head>
+
+<body>
+  <div class="box">
+    <div style="display: flow-root; margin-left: auto; margin-right: auto">
+      <img src="https://ipfs.io/ipfs/QmTDYSga8xkvfTS5FPQedtQDgqJgmsvqqy9TVofyuWBtDJ" style="align: left; height: 42px;" alt=""><br>
+      <p> electronic musician / crypto artist </p>
+      <div style="line-height: 2">
+        <span class="neon">⟠ zplit.eth </span> 0x78E4B692027BE7BA027147d7EaA700e920a0B01f <br>
+      </div>
+    </div>
+    <div class="links">
+      <a id="btnLog" onclick="menuTab(&#39;creations&#39;)" class="primary"> <span class="neon">▷</span> Music</a>
+      <a id="btnNet" onclick="menuTab(&#39;networks&#39;)" class=""> <span class="neon">⎇</span> Network</a>
+      <a id="btnBio" onclick="menuTab(&#39;about&#39;)" class=""> <span class="neon">◰</span> About</a>
+    </div>
+    <br><br>
+    <div id="htmlDisplay">
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+<!--
+    zplit.eth
+-->

@@ -1,0 +1,196 @@
+.unselect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+pre {
+  white-space: pre-line;
+}
+
+body {
+  font-size: 0.9rem;
+  background-color: #080808;
+  background-size: cover;
+  font-family: monospace;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+}
+
+p {
+  text-align: left;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+h3 {
+  font-family: sans-serif;
+}
+
+hr {
+  border-color: #444;
+  border-top: none;
+}
+
+
+.box {
+  margin-top: 1.5rem;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.25rem;
+}
+
+.neon {
+  color: #0eb;
+}
+
+.backdark {
+  filter: opacity(0.5);
+  background-size: cover;
+  padding-top: 100%;
+}
+
+.fronttext {
+  z-index: 1;
+  width: -webkit-fill-available;
+  position: absolute;
+  bottom: 2rem;
+  padding: 1rem;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.links {
+  padding-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.links a {
+  width: auto;
+  margin-right: 0.2rem;
+  margin-right: 0.2rem;
+  break-inside: auto;
+  text-align: center;
+  border: solid 1px #00eebb6b;
+  padding: 0.5rem;
+  border-radius: 0.15rem;
+}
+
+
+.boton {
+  width: auto;
+  margin-right: 0.25rem;
+  break-inside: auto;
+  text-align: center;
+  border: solid 1px #00eebb6b;
+  padding: 0.5rem;
+  border-radius: 0.15rem;
+}
+
+
+.fullbtn {
+  display: inline-block;
+  width: 100px;
+}
+
+.links .icon img {
+  width: 1.2rem;
+}
+
+.profile {
+  float: left;
+  width: 7rem;
+  margin: 0.9rem;
+  border: solid 1px #00eebb6b;
+}
+
+.sublte {
+  color: #ffffffb5;
+}
+
+@media only screen and (max-width: 650px) {
+  .box {
+    width: 95%;
+  }
+
+  .profile {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .box {
+    width: 37%;
+  }
+
+  .links {
+    width: 70%;
+  }
+
+}
+
+.links .primary {
+  border: solid 1px #006aee6b;
+}
+
+.item {
+  border: solid 1px #006aee6b;
+  border-radius: 0.25rem;
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 2.5rem;
+  display: flow-root;
+  position: relative;
+}
+
+.item .icon {
+  width: 32px;
+  float: left;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+}
+
+.artwork {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.3rem;
+}
+
+.icon {
+  margin-bottom: 1rem;
+  width: 32px;
+  float: left;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+}
+
+.network {
+  border: none;
+  padding: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0rem;
+}
